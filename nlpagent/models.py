@@ -48,7 +48,7 @@ class Course(models.Model):
     # can't use 'type' ;) it's a keyword in python
     category = models.CharField(max_length=2, 
                                 choices=CATEGORY_CHOICES, 
-                                default='NO'),
+                                default='NO')
     people = models.ManyToManyField(Person)
     first_meeting = models.DateTimeField()
     first_meeting_at = models.CharField(max_length=50)
