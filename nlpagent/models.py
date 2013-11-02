@@ -115,9 +115,10 @@ class ModuleMembership(models.Model):
 
 
     def __unicode__(self):
-        return "Module %s for %s (%s)" % (  module.title, 
-                                            major.name, 
-                                            DEGREE_CHOICES[self.degree])
+        return "Module %s for %s (%s)" % (  self.module.title,
+                                            self.major.name, 
+                                            self.degree # FIXME
+                                        )
 
 
         
