@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'eca2013.views.home', name='home'),
+    url(r'^$', include('nlpagent.urls'), name='home'),
+    url(r'^nlpagent/', include('nlpagent.urls')),
     # url(r'^eca2013/', include('eca2013.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
