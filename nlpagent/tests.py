@@ -6,11 +6,13 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
-
+from nlpagent.models import Person
 
 class SimpleTest(TestCase):
-    def test_basic_addition(self):
+    def test_person_title_not_obligatory(self):
         """
-        Tests that 1 + 1 always equals 2.
+        The title field in person should not be obligatory
         """
-        self.assertEqual(1 + 1, 2)
+        p = Person(first_name="John", last_name="Doe")
+        p.save()
+        self.assertEqual(Person.objects.get(pk=p.id).title, "")

@@ -8,7 +8,7 @@ class Person(models.Model):
         ordering = ["last_name"]
         verbose_name_plural = "People"
 
-    address = models.CharField(max_length=30) # Prof. Dr. Dr. hc. mult.
+    title = models.CharField(max_length=30, blank=True) # Prof. Dr. hc. mult.
     first_name = models.CharField(max_length=30) 
     last_name =  models.CharField(max_length=30) 
     # and more
