@@ -1,0 +1,15 @@
+<h1>Echo Service</h1>
+
+{% if message %}
+    <p>The machine said: <strong>{{message}}</strong></p>
+{% endif %}
+
+<p>
+    <form action="{% url 'echo' %}" method="post">
+        {% csrf_token %}
+        <label for="message">Message:</label>
+        <input  type="text" name="message" id="message"
+                value="Something!" autofocus />
+        <input type="submit" name="submit" value="Say!" />
+    </form>
+</p>
