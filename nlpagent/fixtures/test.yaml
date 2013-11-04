@@ -1,0 +1,75 @@
+# PEOPLE
+-   model: nlpagent.person
+    pk:
+    fields:
+        title: Prof.
+        first_name: Sebastian
+        last_name: Möller
+-   model: nlpagent.person
+    pk: 2
+    fields:
+        title: Dr.
+        first_name: Jörg
+        last_name: Müller
+-   model: nlpagent.person
+    pk: 3
+    fields:
+        first_name: Christina
+        last_name: Dicke
+-   model: nlpagent.person
+    pk: 4
+    fields:
+        first_name: Robert
+        last_name: Walter
+-   model: nlpagent.person
+    pk: 5
+    fields:
+        first_name: Alexander
+        last_name: Raake
+-   model: nlpagent.person
+    pk: 6
+    fields:
+        title: Dr.
+        first_name: Hamed
+        last_name: Ketabdar
+# COURSES
+-   model: nlpagent.course
+    pk: 1
+    fields:
+        number: 0434 L 900
+        title: Sprachkommunikation (Sprachsignalverarbeitung und Sprachtechnologie)
+        credit_points: 6
+        category: IV
+        people: [1]
+        first_meeting: 2013-10-21 10:00:00
+        first_meeting_at: "Auditorium 3, Geb. TEL, 20. Etage"
+-   model: nlpagent.course
+    pk: 2
+    fields:
+        number: 0434 L 902
+        title: Mobile Interaction
+        credit_points: 6
+        category: IV
+        people: [2,3,4]
+        first_meeting: 2013-10-21 10:00:00
+        first_meeting_at: "Auditorium 3, Geb. TEL, 20. Etage"
+-   model: nlpagent.course
+    pk: 3
+    fields:
+        number: 0434 L 904
+        title: Kommunikationsakustik
+        credit_points: 3
+        category: VL
+        people: [5]
+        first_meeting: 2013-10-21 10:00:00
+        first_meeting_at: "Auditorium 1, Geb. TEL, 20. Etage"
+-   model: nlpagent.course
+    pk: 4
+    fields:
+        number: 0434 L 903
+        title: Computer-supported Interaction
+        credit_points: 3
+        category: IV
+        people: [6]
+        first_meeting: 2013-10-25 14:00:00
+        first_meeting_at: TEL1118/19
